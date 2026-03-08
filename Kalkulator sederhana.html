@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator sederhana</title>
+    <style>
+        body {
+            background-image: url(calcu.png);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container {
+            background-color: rgb(227, 226, 226);
+            width: 35%;
+            height: 40%;
+            align-items: center;
+            margin-left: 33%;
+            margin-top: 7%;
+            padding-bottom: 10%;
+            border-radius: 10px;
+            border: 2px solid darkgray;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.984);
+        }
+
+        button {
+            background-color: blue;
+            color: aliceblue;
+            width: 60%;
+            height: 10%;
+            padding-bottom: 2%;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 20%;
+            margin-top: 4%;
+        }
+
+        button:hover {
+            background-color: rgb(137, 190, 236);
+            color: aliceblue;
+            width: 60%;
+            height: 10%;
+            padding-bottom: 2%;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 20%;
+            margin-top: 4%;
+
+        }
+
+        h2 {
+            font-size: 20pt;
+            color: black;  
+            text-align: center;  
+            padding-top: 15%;   
+        }
+
+        #inputNama {
+            width: 70%;
+            margin-left: 15%;
+            padding-bottom: 2%;
+            border-radius: 5px;
+            margin-top: 3%;
+        }
+
+        #inputNama1 {
+            width: 70%;
+            margin-left: 15%;
+            padding-bottom: 2%;
+            border-radius: 5px;
+            margin-top: 4%;
+        }
+
+        #box {
+            width: 60%;
+            padding-bottom: 2%;
+            background-color: aliceblue;
+            border-radius: 5px;
+            margin-left: 20%;
+            margin-top: 4%;
+        }
+
+        #hasilInput {
+            text-align: center;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Kalkulator Sederhana</h2>
+        <input type="number" id="inputNama" placeholder="Angka pertama"><br>
+        <input type="number" id="inputNama1" placeholder="Angka Kedua"><br>
+        <select id="box"><br>
+            <option value="Tambah" >Tambah(+)</option>
+            <option value="Kurang" >Kurang(-)</option>
+            <option value="Kali" >Kali(*)</option>
+            <option value="Bagi" >Bagi(/)</option>
+        </select><br>
+        <button id="tombol">Hitung</button><br>
+        <p id="hasilInput"></p>
+    </div>
+
+    <script>
+        const tombol = document.getElementById("tombol");
+        tombol.addEventListener("click", function(){
+        let inputNama = parseFloat(document.getElementById("inputNama").value);
+        let inputNama1 = parseFloat(document.getElementById("inputNama1").value);
+        let box = document.getElementById("box").value;
+        let hasil;
+        if (box === "Tambah") hasil = inputNama + inputNama1;
+        else if (box === "Kurang") hasil = inputNama - inputNama1;
+        else if (box === "Kali") hasil = inputNama * inputNama1;
+        else if (box === "Bagi") hasil = inputNama / inputNama1;
+        document.getElementById("hasilInput").textContent = "Hasil: " + hasil;
+        });
+    </script>
+</body>
+</html>

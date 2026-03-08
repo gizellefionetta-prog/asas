@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.judul h1 {
+    color: crimson;
+    text-align: center;
+}
+
+.sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(3,120px);
+    gap: 2px;
+    background-color: darkred;
+    border: 3px solid darkred;
+    box-shadow: rgba(17, 12, 46, 0.3) 12px 12px 10px 0px;
+}
+
+.block {
+    display: grid;
+    grid-template-columns: repeat(3,40px);
+    grid-template-rows: repeat(3,40px);
+}
+
+.cell {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    outline: none;
+}

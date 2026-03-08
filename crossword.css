@@ -1,0 +1,134 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.crossword{
+    display: grid;
+    grid-template-rows: repeat(14, auto);
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(18, auto);
+    box-shadow: rgba(5, 4, 12, 0.742)px 48px 100px 0px;
+}
+
+.cell{
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid rgb(58, 51, 51);
+}
+
+.unused {
+    background-color: rgb(48, 140, 220);
+}
+
+h1{
+    text-align: center;
+    color:rgb(246, 189, 250);
+    font-size: 25pt;
+}
+
+input{
+    display: block;
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 0px solid;
+    z-index: 1;
+}
+
+.number{
+    position: relative;
+    font-weight: 100;
+    color: rgb(128, 79, 79);
+    bottom: 35px;
+    left: 3px;
+    z-index: 10;
+    font-size: 7pt;
+
+}
+
+input:focus{
+    outline: none;
+    background-color: rgb(160, 217, 255);
+    height: 37.5px;
+    width: 37.2px;
+}
+
+.questions{
+    max-width: 60%;
+}
+
+h2{
+    font-size: 17pt;
+    color: rgb(0, 137, 211);
+    text-align: center;
+    font-weight: bolder;
+}
+
+#questionList{
+    line-height: 2rem;
+    font-size: 1.5rem;
+    padding-left: 0px;
+    font-family: 'Poppins';
+
+}
+
+#questionList li{
+    text-align: center;
+    list-style-position: inside;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: rgb(98, 178, 253);
+    color: rgb(255, 255, 255);
+    font-size: 12pt;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid transparent;
+}
+
+.answers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    visibility: hidden;
+    color: black;
+    margin:1.5rem ;
+}
+
+button:hover~.answers {
+    visibility: visible;
+}
+
+button:hover{
+    background-color: azure;
+    border: 2px solid rgb(9, 119, 193);
+    color: rgb(15, 154, 247);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.JawabanTTS {
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-template-rows: repeat(2,auto);
+}

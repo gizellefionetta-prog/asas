@@ -1,0 +1,147 @@
+body {
+    background: #2a2a2a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    color: aliceblue;
+}
+
+header {
+    color: rgb(0, 121, 169);
+    font-size: 14pt;
+    text-align: center;
+}
+
+.bilangan_digital {
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    grid-template-rows: repeat(5,auto);
+    grid-gap: 10px;
+    width: 100vw;
+    margin: auto;
+    justify-content: center;
+}
+
+.one {
+    background: linear-gradient(to bottom right, #ff1100 0%, #db604d 100%);
+}
+
+.one .title, .one .desc {
+    background: -webkit-linear-gradient(#ff1100, #db604d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.two {
+    background: linear-gradient(to bottom right,#1a1ae8 0%, #2a71db 100%);
+}
+
+.two .title, .two .desc {
+    background: -webkit-linear-gradient(#1a1ae8, #2a71db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.three {
+    background: linear-gradient(to bottom right, #c1d356 0%, #b2cf33 100%);
+}
+
+.three .title, .three .desc {
+    background: -webkit-linear-gradient(#c1d356, #b2cf33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.four {
+    background: linear-gradient(to bottom right, #a2d782 0%, #b3eca6 100%);
+}
+
+.four .title, .four .desc {
+    background: -webkit-linear-gradient(#a2d782, #b3eca6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.five {
+    background: linear-gradient(to bottom right, #f3a64e 0%, #eabe5d 100%);
+}
+
+.five .title, .five .desc {
+    background: -webkit-linear-gradient(#f3a64e, #eabe5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.six {
+    background: linear-gradient(to bottom right, #0a80b7 0%, #87bcd4 100%);
+}
+
+.six .title, .six .desc {
+    background: -webkit-linear-gradient(#0a80b7, #87bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seven {
+    background: linear-gradient(to bottom right, #ed5b55 0%, #e99c7d 100%);
+}
+
+.seven .title, .seven .desc {
+    background: -webkit-linear-gradient(#ed5b55, #e99c7d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.eight {
+    background: linear-gradient(to bottom right, #dc89ea 0%,#ca06ec 100%);
+}
+
+.eight .title, .eight .desc {
+    background: -webkit-linear-gradient(#dc89ea, #ca06ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nine {
+    background: linear-gradient(to bottom right, #858181 0%,#464247 100%);
+}
+
+.nine .title, .nine .desc {
+    background: -webkit-linear-gradient(#797575, #464247);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zero {
+    background: linear-gradient(to bottom right, #eeff00 0%, #ffc400 100%);
+}
+
+.zero .title, .zero .desc {
+    background: -webkit-linear-gradient(#eeff00, #ffc400);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.bilangan-digital {
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.bilangan-digital .bilangan-digital-inner {
+    background: #232323;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.bilangan-digital .title {
+    font: 700 30px "Cambria" ,sans serif;
+    margin: 0.3em 0 0;
+    transition: 0.8s ease 600ms;
+    color: aqua;
+}

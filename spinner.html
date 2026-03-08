@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spinner Nama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input,
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        /* Panah penunjuk */
+        #arrow {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid red;
+            margin: 10px auto;
+        }
+
+        #spinnerCanvas {
+            border: 4px solid #333;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            transition: transform 3s ease-out;
+        }
+
+        #result {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: green;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #result.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Spinner Nama</h1>
+    <form id="form">
+        <input type="text" id="nameInput" placeholder="Masukkan nama" required>
+        <button type="submit">Tambah</button>
+    </form>
+
+    <!-- Panah -->
+    <div id="arrow"></div>
+    <canvas id="spinnerCanvas" width="300" height="300"></canvas>
+
+    <button id="spinBtn">Putar</button>
+    <div id="result"></div>
+
+    <script>
+        const canvas = document.getElementById('spinnerCanvas');
+        const ctx = canvas.getContext('2d');
+        const form = document.getElementById('form');
+        const nameInput = document.getElementById('nameInput');
+        const spinBtn = document.getElementById('spinBtn');
+        const result = document.getElementById('result');
+
+        let names = [];
+        let currentRotation = 0;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = nameInput.value.trim();
+            if (name && !names.includes(name)) {
+                names.push(name);
+                drawSpinner();
+            }
+            nameInput.value = '';
+        });
+
+        function drawSpinner(highlightIndex = -1) {
+            const radius = canvas.width / 2;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (names.length === 0) return;
+
+            const sliceAngle = 2 * Math.PI / names.length;
+
+            names.forEach((name, i) => {
+                const startAngle = i * sliceAngle;
+                const endAngle = (i + 1) * sliceAngle;
+
+                ctx.fillStyle = `hsl(${i * (360 / names.length)}, 70%, 60%)`;
+                ctx.beginPath();
+                ctx.moveTo(radius, radius);
+                ctx.arc(radius, radius, radius, startAngle, endAngle);
+                ctx.closePath();
+                ctx.fill();
+
+                // Kalau slice ini terpilih → kasih border tebal
+                if (i === highlightIndex) {
+                    ctx.lineWidth = 5;
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                }
+
+                ctx.save();
+                ctx.translate(radius, radius);
+                ctx.rotate(startAngle + sliceAngle / 2);
+                ctx.textAlign = "right";
+                ctx.fillStyle = "#000";
+                ctx.font = "14px Arial";
+                ctx.fillText(name, radius - 10, 5);
+                ctx.restore();
+            });
+        }
+
+        spinBtn.addEventListener('click', () => {
+            if (names.length === 0) {
+                alert("Tambahkan nama dulu!");
+                return;
+            }
+
+            const sliceAngle = 360 / names.length;
+            const extraSpin = 360 * 5 + Math.floor(Math.random() * 360);
+            currentRotation += extraSpin;
+
+            canvas.style.transition = 'transform 3s ease-out';
+            canvas.style.transform = `rotate(${currentRotation}deg)`;
+
+            setTimeout(() => {
+                canvas.style.transition = 'none';
+
+                const normalizedRotation = (360 - (currentRotation % 360)) % 360;
+                const selectedIndex = Math.floor(normalizedRotation / sliceAngle);
+                const selectedName = names[selectedIndex];
+
+                // Tampilkan hasil
+                result.innerText = `🎉 Terpilih: ${selectedName} 🎉`;
+                result.classList.add("show");
+
+                // Popup notifikasi
+                setTimeout(() => {
+                    alert(`Nama yang terpilih adalah: ${selectedName}`);
+                }, 300);
+
+                // Hapus nama terpilih dari daftar
+                names.splice(selectedIndex, 1);
+
+                // Gambar ulang dengan highlight
+                drawSpinner(selectedIndex);
+
+                // Hilangkan teks setelah 4 detik
+                setTimeout(() => {
+                    result.classList.remove("show");
+                }, 4000);
+
+            }, 3000);
+        });
+
+        drawSpinner();
+    </script>
+</body>
+
+</html>

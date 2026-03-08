@@ -1,0 +1,212 @@
+body {
+    background: #2a2a2a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    color: aliceblue;
+}
+
+header {
+    color: skyblue;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.periodic_table {
+    display: grid;
+    grid-template-columns: repeat(18,auto);
+    grid-template-rows: repeat(9,auto);
+    grid-gap: 10px;
+    width: 100vw;
+    margin: auto;
+    justify-content: center;
+}
+
+.nomor-massa-atom {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.one {
+    background: linear-gradient(to bottom right, #f3f9a6 0%, #cbc634 100%);
+}
+
+.one .title, .one .desc {
+    background: -webkit-linear-gradient(#f3f9a6, #cbc634);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.two {
+    background: linear-gradient(to bottom right,#9b6fee 0%, #9900ff 100%);
+}
+
+.two .title, .two .desc {
+    background: -webkit-linear-gradient(#9b6fee, #9900ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.three {
+    background: linear-gradient(to bottom right, #f34a4a 0%, #dd7171 100%);
+}
+
+.three .title, .three .desc {
+    background: -webkit-linear-gradient(#f34a4a, #dd7171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.four {
+    background: linear-gradient(to bottom right, #ffae00 0%, #f3bc44 100%);
+}
+
+.four .title, .four .desc {
+    background: -webkit-linear-gradient(#ffae00, #f3bc44);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.five {
+    background: linear-gradient(to bottom right, #34f573 0%, #95e274 100%);
+}
+
+.five .title, .five .desc {
+    background: -webkit-linear-gradient(#34f573, #95e274);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.six {
+    background: linear-gradient(to bottom right, #0a80b7 0%, #87bcd4 100%);
+}
+
+.six .title, .six .desc {
+    background: -webkit-linear-gradient(#0a80b7, #87bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seven {
+    background: linear-gradient(to bottom right, #dc89ea 0%, #ca06ec 100%);
+}
+
+.seven .title, .seven .desc {
+    background: -webkit-linear-gradient(#dc89ea, #ca06ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.eight {
+    background: linear-gradient(to bottom right, #cbc634 0%,#ecea9f 100%);
+}
+
+.eight .title, .eight .desc {
+    background: -webkit-linear-gradient(#dc89ea, #ca06ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nine {
+    background: linear-gradient(to bottom right, #a600ff 0%,#d400ff 100%);
+}
+
+.nine .title, .nine .desc {
+    background: -webkit-linear-gradient(#dc89ea, #ca06ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ten {
+    background: linear-gradient(to bottom right, #ff00b3 0%, #ff0095 100%);
+}
+
+.ten .title, .ten .desc {
+    background: -webkit-linear-gradient(#dc89ea, #ca06ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.periodic-element {
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.periodic-element .periodic-element-inner {
+    background: #232323;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.periodic-element .title {
+    font: 700 30px "Cambria" ,sans serif;
+    margin: 0.3em 0 0;
+    transition: 0.8s ease 600ms;
+    color: aqua;
+}
+
+.periodic-element .desc {
+    font: 700 12px "Cambria" ,sans serif;
+    margin-top: 0.2em;
+    color: azure;
+}
+
+.periodic-element .na {
+    font: 700 12px "Cambria" ,sans serif;
+    margin-top: 0.1em;
+    color: azure;
+}
+
+.periodic-element .ma {
+    font: 700 9pt "Cambria" ,sans serif;
+    margin-top: 0.1em;
+    margin-left: 2;
+    color: azure;
+}
+
+.periodic-element:hover {
+    transform: scale(2.5);
+    z-index: 10;
+}
+
+.periodic-element:hover .periodic-element-inner {
+    background: transparent;
+}
+
+.periodic-element:hover .title, .periodic-element:hover .desc, .periodic-element:hover .na, .periodic-element:hover .ma {
+    -webkit-text-fill-color: #222222;
+}
+
+.periodic-element:hover::after {
+    top: 105px;
+    opacity: 1;
+}
+
+.periodic-element {
+    cursor: pointer;
+}
+
+.jarak89 {
+    height: 60px;
+}
+
+.keterangan {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keterangan .nama {
+    color: black;
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 10%;
+}
