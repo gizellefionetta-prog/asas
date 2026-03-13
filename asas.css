@@ -22,20 +22,12 @@
    
 }
 
-.logo img {
-    width: 20%;
-    height: 8%;
-    margin-left: 10%;
-    margin-top: 2%;
-}
-
-.logo a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 30pt;
+.logo a{
+    font-size: 2rem;
     font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
 }
-
 .menu {
     margin-right: 20px;
     display: flex;
@@ -51,6 +43,266 @@
     color:#ffffff;
     text-decoration: none;
 }
+
+nav .menu {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        nav .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        nav .menu a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #c3e91c;
+            transition: width 0.3s ease;
+        }
+
+        nav .menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive menu */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu-icon span {
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: #1e293b;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+
+            #menu-toggle:checked+.menu-icon+.menu {
+                max-height: 300px;
+            }
+
+            .menu-icon {
+                display: flex; 
+            }
+
+            .navbar {
+                width: 80%;
+                height: 3%;
+            }
+
+            .logo a {
+                font-size: 12pt;
+            }
+
+        section {
+            display: flex;
+            height: 100vh;
+            width: 150vw;
+            align-items: center;
+            justify-content: center; 
+            color: aliceblue;
+            font-size: 30px;
+        }
+
+            #about {
+                width: 90%;
+                height: 30%;
+                padding-top: 30%;
+            }
+
+            .content {
+                width: 20%;
+                height: 30%;
+            }
+
+            div.text h2 {
+                font-size: 15pt;
+                margin-top: 5%;
+                margin-left: 13%;
+            }
+
+            div.gambar {
+                width: 268vw;
+                padding-top: 10%;
+                background-size: cover;
+            }
+
+            div.about img {
+                width: 20%;
+                height: 20%;
+            }
+
+            #identitas {
+                width: 240vw;
+            }
+
+            #services {
+                width: 240vw;
+            }
+
+            #portofolio {
+                width: 270vw;
+            }
+
+            #portofolio .folio {
+                width: 100%;
+                margin-top: 100%;
+            }  
+            
+            #portofolio .porto{
+                width: 230vw;
+                margin-right: 100%;
+                margin-top: 10%;
+            }
+
+            #portofolio .folio h1 {
+                font-size: 20pt;
+                font-weight: bold;
+                width: 200%;
+                margin-left: 40%;
+            }
+
+            #portofolio .folio h6 {
+                font-size: 10pt;
+                width: 200%;
+                margin-left: 40%;
+            }
+
+            #clients {
+                width: 240vw;
+            }
+
+            div.my-clients {
+                margin-right: 50%;
+            }
+
+            #skill {
+                width: 240vw;
+            }
+
+            #skill .formFeedback {
+                width: 70%;
+            }
+
+            div.work1 {
+                width: 60vw;
+                height: 30vh;
+                background-color: rgb(254, 255, 255);
+            }
+
+            div.work2 {
+                width: 60vw;
+                background-color: rgb(254, 255, 255);
+            }
+
+            div.work3 {
+                width: 60vw;
+                background-color: rgb(254, 255, 255);
+            }
+
+            div.work4 {
+                width: 60vw;
+                background-color: rgb(254, 255, 255);
+            }
+
+            div.work2 h2 {
+                width: 240vw;
+            }
+
+            div.work2 h3 {
+                margin-right: 30%;
+            }
+
+            div.work3 h3 {
+                margin-right: 30%;
+            }
+
+            div.work2 h4 {
+                margin-left: 30%;
+            }
+
+            div.work3 h4 {
+                margin-left: 45%;
+            }
+
+            div.work4 h4 {
+                margin-left: 50%;
+            }
+
+            div.contact-form button{
+                margin-right: 20%;
+            }
+
+            #contact {
+                width: 270vw;
+            }
+
+            div.container8 {
+                margin-top: 40%;
+                margin-left: 20%;
+            }
+
+            div.phone1 {
+                width: 60vw;
+            }
+
+            div.phone2 {
+                width: 70vw;
+            }
+
+            div.phone3 {
+                width: 60vw;
+            }
+
+            div.phone3 p {
+                width: 100%;
+                margin-left: 10%;
+            }
+
+            div.phone2 p {
+                margin-left: 10%;
+            }
+
+            #map {
+                width: 270vw;
+            }
+        }
 
 section {
     display: flex;
@@ -129,7 +381,7 @@ h2 {
 
 #identitas {
     background-color: rgb(255, 255, 255);
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 .container {
@@ -500,26 +752,27 @@ h2 {
     border-radius: 10px;
 }
 
-#clients {
-    background-color: aliceblue;
+/* #clients {
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 80%;
-    padding-bottom: 10%;
-}
+    padding-bottom: 8%;
+} */
 
 .container2 h2 {
     width: 100%;
     color: rgb(142, 81, 241);
     font-size: 24pt;
     margin-top: 10%;
-    margin-left: 28%;
+    margin-left: 25%;
+    position: relative;
 }
 
 .my-clients {
     display: grid;
     width: 150%;
     grid-template-columns: repeat(5, 1fr);
-    margin-right: 20%;
+    margin-right: 40%;
 }
 
 .client1 h5{
@@ -783,7 +1036,7 @@ h2 {
 }
 
 #work {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 80%;
     padding-bottom: 5%;
@@ -824,6 +1077,7 @@ h2 {
 
 .work2 h2{
     font-size: 40pt;
+    margin-right: 100%;
 }
 
 .work2 h3 {
@@ -833,7 +1087,7 @@ h2 {
     position: absolute;
     padding: 2px 6px;
     top: 20px;
-    left: 450px;
+    left: 340px;
 }
 
 .work2 h4 {
@@ -841,7 +1095,7 @@ h2 {
     font-size: 15pt;
     position: absolute;
     top: 70px;
-    margin-left: 8%;
+    margin-left: 4%;
 }
 
 .work3 h2{
@@ -855,7 +1109,7 @@ h2 {
     position: absolute;
     padding: 2px 6px;
     top: 20px;
-    left: 780px;
+    left: 600px;
 }
 
 .work3 h4 {
@@ -863,7 +1117,7 @@ h2 {
     font-size: 15pt;
     position: absolute;
     top: 70px;
-    margin-left: 8%;
+    margin-left: 5%;
 }
 
 .work4 h2{
@@ -877,7 +1131,7 @@ h2 {
     position: absolute;
     padding: 2px 6px;
     top: 20px;
-    left: 1100px;
+    left: 830px;
 }
 
 .work4 h4 {
@@ -885,7 +1139,7 @@ h2 {
     font-size: 15pt;
     position: absolute;
     top: 70px;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .tks {
@@ -933,11 +1187,13 @@ h2 {
     margin-bottom: 10px;
     background-color: transparent;
     color: #181717;
-    border: 0.3px thin #000;
+    text-decoration: none;
+    padding-left: 1.5%;
+    border: 1px solid #000;
 }
 
 .contact-form textarea {
-    width: 84%;
+    width: 86%;
     height: 40vh;
     resize: none;
     margin-top: 20px;
@@ -945,7 +1201,10 @@ h2 {
     outline: none;
     color: #3e3e3e;
     font-size: 12pt;
+    padding-left: 1.5%;
+    padding-top: 1%;
     margin-left: 5vw;
+    border: 1px solid #000;
 }
 
 .contact-form button {
@@ -955,7 +1214,20 @@ h2 {
     background-color: rgb(142, 81, 241);
     color: #fff;
     border: none;
-    margin-left: 8%;
+    margin-left: 7%;
+    margin-top: 2%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    width: 13%;
+    height: 9%;
+    font-size: 14pt;
+    background-color: rgb(179, 140, 242);
+    color: #f3eded;
+    border: none;
+    margin-left: 7%;
     margin-top: 2%;
     cursor: pointer;
     border-radius: 10px;
@@ -1024,10 +1296,6 @@ h2 {
     margin-top: 2%;
     margin-left: 2%;
     font-weight: bold;
-}
-
-#map {
-    width: 100%;
 }
 
 iframe {
