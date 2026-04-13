@@ -119,10 +119,11 @@ nav .menu {
 
             .menu-icon {
                 display: flex; 
+                margin-right: 5%;
             }
 
             .navbar {
-                width: 80%;
+                width: 32%;
                 height: 3%;
             }
 
@@ -132,8 +133,8 @@ nav .menu {
 
         section {
             display: flex;
-            height: 100vh;
-            width: 150vw;
+            height: 30%;
+            width: 32%;
             align-items: center;
             justify-content: center; 
             color: aliceblue;
@@ -141,9 +142,8 @@ nav .menu {
         }
 
             #about {
-                width: 90%;
+                width: 32%;
                 height: 30%;
-                padding-top: 30%;
             }
 
             .content {
@@ -151,14 +151,19 @@ nav .menu {
                 height: 30%;
             }
 
+            div.text img {
+                margin-top: 40%;
+            }
+
             div.text h2 {
                 font-size: 15pt;
                 margin-top: 5%;
-                margin-left: 13%;
+                margin-right: 10%;
             }
 
             div.gambar {
-                width: 268vw;
+                width: 102%;
+                height: 65%;
                 padding-top: 10%;
                 background-size: cover;
             }
@@ -169,43 +174,96 @@ nav .menu {
             }
 
             #identitas {
-                width: 240vw;
+                width: 32%;
+                height: 65%;
             }
 
+            div.teks h1 {
+                font-size: 16pt;
+            }
+
+            div.container {
+                width: 32%;
+                height: 65%;
+                padding-bottom: 10%;
+            }
+
+
             #services {
-                width: 240vw;
+                width: 102%;
+            }
+
+            div.container1 {
+                width: 102%;
+            }
+
+            div.container1 h1 {
+                font-size: 16pt;
+                padding-top: 30%;
+            }
+
+            div.container1 p {
+                font-size: 11pt;
+                margin-bottom: 20%;
+            }
+
+            div.services-grid{
+                width: 102%;
+                grid-template-columns: repeat(2,auto);
+                grid-template-rows: repeat(3,auto);
+                padding-right: 5%;
+                padding-bottom: 20%;
+            }
+
+            div.service-item {
+                width: 100%;
+                height: 80%;
+            }
+
+            div.service-item h2 {
+                font-size: 8pt;
+            }
+
+            div.service-item p {
+                font-size: 7pt;
+            }
+
+            div.service-item #icon{
+                width: 40%;
+                height: 40%;
+                margin-right: 5%;
             }
 
             #portofolio {
-                width: 270vw;
+                width: 102%;
             }
 
             #portofolio .folio {
-                width: 100%;
+                width: 102%;
                 margin-top: 100%;
             }  
             
             #portofolio .porto{
-                width: 230vw;
+                width: 102%;
                 margin-right: 100%;
                 margin-top: 10%;
             }
 
             #portofolio .folio h1 {
-                font-size: 20pt;
+                font-size: 14pt;
                 font-weight: bold;
-                width: 200%;
-                margin-left: 40%;
+                width: 102%;
+                padding-right: 20%;
             }
 
             #portofolio .folio h6 {
-                font-size: 10pt;
+                font-size: 8pt;
                 width: 200%;
-                margin-left: 40%;
+                padding-right: 110%;
             }
 
             #clients {
-                width: 240vw;
+                width: 102%;
             }
 
             div.my-clients {
@@ -213,11 +271,27 @@ nav .menu {
             }
 
             #skill {
-                width: 240vw;
+                width: 70%;
+            }
+
+            div.teknik1 {
+                margin-right: 30%;
+                width: 250%;
             }
 
             #skill .formFeedback {
-                width: 70%;
+                width: 100%;
+            }
+
+
+            div.tulisan1 p{
+                font-size: 9pt;
+                width: 100%;
+            }
+
+            div.tulisan1 h4{
+                font-size: 12pt;
+                margin-left: 80%;
             }
 
             div.work1 {
@@ -270,7 +344,7 @@ nav .menu {
             }
 
             #contact {
-                width: 270vw;
+                width: 102%;
             }
 
             div.container8 {
@@ -300,7 +374,7 @@ nav .menu {
             }
 
             #map {
-                width: 270vw;
+                width: 102%;
             }
         }
 
